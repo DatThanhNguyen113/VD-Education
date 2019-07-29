@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "PageTableTime";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/vendor/core-calendar.min.css" rel="stylesheet" />
+<link href="~/Content/vendor/calendar.min.css" rel="stylesheet" />
+
+<div class="content-header">
+    <h3 class="mb-0 title">Thời Khóa Biểu</h3>
+</div>
+<div class="text-center">
+    <h2 id="TimeTableCurrentWeek"></h2>
+</div>
+<div id='calendar'></div>
+
+@section scripts {
+    <script src="~/Scripts/Vendor/core-calendar.min.js"></script>
+    <script src="~/Scripts/Vendor/calendar.min.js"></script>
+    <script src="~/Scripts/Manager/TimeTable.js"></script>
+}

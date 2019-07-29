@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">VDAndroid</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="CDVD">Cao Đẳng Viễn Đông</string>
+    <string name="SoLienLac">Sổ liên lạc điện tử</string>
+    <string name="MSSV">MSSV</string>
+    <string name="Password">Mật Khẩu</string>
+    <string name="ForgotPass">Quên Mật Khẩu</string>
+    <string name="Login">Đăng Nhập</string>
+    <string name="LichHoc">Lịch học</string>
+    <string name="LichDay">Lịch dạy</string>
+    <string name="LichThi">Lịch thi</string>
+    <string name="HoSo">Hồ sơ HSSV</string>
+    <string name="HoSoGV">Hồ sơ GV</string>
+    <string name="DangKi">Đăng kí\n môn học</string>
+    <string name="DanhSachMonHoc">Danh sách\n môn học</string>
+    <string name="ChuongTrinhHoc">Chương trình\n học</string>
+    <string name="DiemDanh">Điểm danh\n</string>
+    <string name="ThongBao">Thông báo\n</string>
+    <string name="TrangChu">Home</string>
+    <string name="ThongTinCaNhan">Thông tin cá nhân</string>
+    <string name="ThongTinDangNhap">Thông tin đăng nhập</string>
+    <string name="TenDangNhap">Tên Đăng Nhập</string>
+    <string name="MatKhauCu">Mật khẩu cũ</string>
+    <string name="MatKhauMoi">Mật khẩu mới</string>
+    <string name="NhapLaiMatKhauMoi">Nhập lại mật khẩu mới</string>
+    <string name="HoVaTen">Họ và Tên</string>
+    <string name="NgaySinh">Ngày Sinh</string>
+    <string name="Email">Email</string>
+    <string name="SoDienThoai">Số điện thoại</string>
+    <string name="QueQuan">Quê quán</string>
+    <string name="DiaChi">Địa chỉ</string>
+    <string name="Nam">Nam</string>
+    <string name="Nu">Nữ</string>
+    <!--<string name="CMND">CMND</string>-->
+    <string name="CapNhat">Cập Nhật</string>
+
+</resources>

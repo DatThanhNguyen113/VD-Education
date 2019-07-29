@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="VDEducation" Class="DataClasses2DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=103.10.44.30;Initial Catalog=VDEducation;Persist Security Info=True;User ID=VDCTeam" SettingsObjectName="Monitor2.Properties.Settings" SettingsPropertyName="VDEducationConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Subject" Member="Subjects">
+    <Type Name="Subject">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TotalCredits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PracticeCredit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TheoryCredit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LessionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FinalEvaluationPercent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SemiFinalEvaluationPercent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DiligencePercent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubjectTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SpecializeID" Type="System.String" CanBeNull="false" />
+      <Column Member="Piority" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

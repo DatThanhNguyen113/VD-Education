@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "ModalPartial";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="modal modal-warning fade" id="modalWarning" tabindex="-1" role="dialog" aria-labelledby="modalWarningLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content transfer-container" style="background-color:#efb706; color:#fff">
+            <div class="modal-body d-flex align-items-center">
+                <div class="col-2">
+                    <img src="~/Content/images/warning.svg" alt="Alternate Text" />
+                </div>
+                <div class="col-10"><span id="warning"></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-warning fade" id="modalError" tabindex="-1" role="dialog" aria-labelledby="modalErrorLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content transfer-container" style="background-color:#cc3300; color:#fff">
+            <div class="modal-body d-flex align-items-center">
+                <div class="col-2">
+                    <img src="~/Content/images/error.svg" alt="Alternate Text" />
+                </div>
+                <div class="col-10"><span id="error"></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-warning fade" id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="modalErrorLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content transfer-container" style="background-color:#13bf99;color: #fff;">
+            <div class="modal-body d-flex align-items-center">
+                <div class="col-2">
+                    <img src="~/Image/SVG/success.svg" alt="Alternate Text" />
+                </div>
+                <div class="col-10"><span id="success"></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-warning fade" id="modalConfirm" tabindex="-1" role="dialog" aria-labelledby="modalConfirm" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title w-100 text-center text-blue">Confirm Action</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col py-1">
+                            <form class="modal-warning custom-form p-4 form-register needs-validation">
+                                <div class="form-group text-center">
+                                    <p class="text-grey" id="messageConfirm">
+                                    </p>
+                                </div>
+                                <div class="form-group text-center" id="btnConfirm">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

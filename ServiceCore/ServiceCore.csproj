@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A85E242D-20C4-4215-A1A7-1CF95A81E90F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServiceCore</RootNamespace>
+    <AssemblyName>ServiceCore</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\AccountDAO.cs" />
+    <Compile Include="DataAccess\ClassDAO.cs" />
+    <Compile Include="DataAccess\KhoaDAO.cs" />
+    <Compile Include="DataAccess\StudentDAO.cs" />
+    <Compile Include="DataAccess\SubjectDAO.cs" />
+    <Compile Include="DataAccess\TeacherDAO.cs" />
+    <Compile Include="DataAccess\UtilityDAO.cs" />
+    <Compile Include="Hash\MD5Hashing.cs" />
+    <Compile Include="Hash\StudentBL.cs" />
+    <Compile Include="Models\Base\BaseDBResult.cs" />
+    <Compile Include="Models\Base\BaseResponseModel.cs" />
+    <Compile Include="Models\Base\BaseResult.cs" />
+    <Compile Include="Models\Base\BaseResultFromObject.cs" />
+    <Compile Include="Models\CareerModel.cs" />
+    <Compile Include="Models\ClassModel.cs" />
+    <Compile Include="Models\MasterTimeTableModel.cs" />
+    <Compile Include="Models\MusterModel.cs" />
+    <Compile Include="Models\NotificationModel.cs" />
+    <Compile Include="Models\NotifyModel.cs" />
+    <Compile Include="Models\RegistedSubjectModel.cs" />
+    <Compile Include="Models\RoomModel.cs" />
+    <Compile Include="Models\SchoolYearModel.cs" />
+    <Compile Include="Models\SignInModel.cs" />
+    <Compile Include="Models\Subject\SubjectModel.cs" />
+    <Compile Include="Models\Subject\SubjectRegisterModel.cs" />
+    <Compile Include="Models\TimeTableModel.cs" />
+    <Compile Include="Models\User\ParentModel.cs" />
+    <Compile Include="Models\User\StudentModel.cs" />
+    <Compile Include="Models\User\TeacherModel.cs" />
+    <Compile Include="Models\WeekModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>11.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bcore.Utility\VD.Utility.csproj">
+      <Project>{292fd353-cf17-4b57-a832-d5f10409258e}</Project>
+      <Name>VD.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VD.DataLayer\VD.DataLayer.csproj">
+      <Project>{97c9784b-502e-4b8f-b52b-238f685770d6}</Project>
+      <Name>VD.DataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

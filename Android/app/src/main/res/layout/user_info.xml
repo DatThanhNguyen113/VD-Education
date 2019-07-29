@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRed"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imgBackUserInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_back"
+            android:padding="20dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/ThongTinCaNhan"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:typeface="serif" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--android:layout_above="@+id/liner1"-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/ThongTinDangNhap"
+                    android:textColor="@color/colorRed"
+                    android:textSize="16sp"
+                    android:typeface="serif" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/color_view" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:text="@string/TenDangNhap"
+                    android:textColor="@color/colorBlack"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/edtMSSV_Info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_editext_border"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:text="@string/MatKhauCu"
+                    android:textColor="@color/colorBlack"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/edtPassOld_Info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_editext_border_v2"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:text="@string/MatKhauMoi"
+                    android:textColor="@color/colorBlack"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/edtPassNew_Info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_editext_border_v2"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:text="@string/NhapLaiMatKhauMoi"
+                    android:textColor="@color/colorBlack"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/edtRetypePassNew_Info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_editext_border_v2"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/ThongTinCaNhan"
+                    android:textColor="@color/colorRed"
+                    android:textSize="16sp"
+                    android:typeface="serif" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/color_view" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:text="@string/HoVaTen"
+                    android:textColor="@color/colorBlack"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/edtFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_editext_border"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <RadioButton
+                        android:id="@+id/radioNam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/Nam" />
+
+                    <RadioButton
+                        android:id="@+id/radioNu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/Nu" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:text="@string/NgaySinh"
+                    android:textColor="@color/colorBlack"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/edtBirthDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_editext_border_v2"
+                    android:enabled="true"
+                    android:focusable="false"
+                    android:padding="10dp"
+                    android:text="31/08/1998"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:text="@string/Email"
+                    android:textColor="@color/colorBlack"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/edtEmail_Info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_editext_border_v2"
+                    android:padding="10dp"
+                    android:text="lxht@gmail.com"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/tvPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:text="@string/SoDienThoai"
+                    android:textColor="@color/colorBlack"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/edtPhoneNumber_Info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_editext_border_v2"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/tvCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:text="@string/QueQuan"
+                    android:textColor="@color/colorBlack"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/edtCountry_Info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_editext_border_v2"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:text="@string/DiaChi"
+                    android:textColor="@color/colorBlack"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/edtAddress_Info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_editext_border_v2"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:typeface="serif"
+                    android:inputType="text" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/liner1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:gravity="end">-->
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnChange"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_button"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_update"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/CapNhat"
+                android:textAllCaps="false"
+                android:textColor="@drawable/custom_text_button"
+                android:typeface="serif"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="10dp" />
+        <!--</RelativeLayout>-->
+    </RelativeLayout>
+
+
+</LinearLayout>

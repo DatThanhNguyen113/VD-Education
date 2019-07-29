@@ -1,0 +1,58 @@
+﻿<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div id="sidebarCollapse" class="hamburger hamburger--emphatic">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse show" id="bs-example-navbar-collapse-1" style="display:contents">
+            <ul id="nav-usercenter" class="nav navbar-right">
+                <li class="navbar-item no-arrow dropdown">
+                    <a class="navbar-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        <i class="fas fa-bell fa-fw"></i>
+                        <span class="badge badge-danger badge-counter">!</span>
+                    </a>
+                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated-grow-in w-300-px">
+                        <h6 class="dropdown-header">Notification</h6>
+                        <div id="Notification_ct">
+                         
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar-item no-arrow dropdown">
+                    <a class="navbar-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        <i class="fas fa-envelope fa-fw"></i>
+                        <span class="badge badge-danger badge-counter">!</span>
+                    </a>
+                    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated-grow-in w-300-px">
+                        <h6 class="dropdown-header">Email</h6>
+                        <div id="Notifycation_cp">
+                     
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar-item no-arrow dropdown px-0">
+                    <div class="topbar-divider d-none d-sm-block"></div>
+                </li>
+                <li class="navbar-item dropdown">
+                    <a class="navbar-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="img-profile rounded-circle" src="~/Image/LogoVD.png">
+                        <span id="UserCenter-Name" class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-list dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                        @using (Html.BeginForm("LogOut", "Account", FormMethod.Get))
+                        {
+                            <button class="dropdown-item" type="submit">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Đăng Xuất
+                            </button>
+                        }
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

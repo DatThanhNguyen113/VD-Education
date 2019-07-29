@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "ReceiveNotification";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-header">
+    <h3 class="mb-0 title">Thông Báo</h3>
+</div>
+
+<div class="NotificationInbox">
+    <div class="card">
+        <div class="card-body">
+            <div class="inbox-body">
+                <div class="view-inbox-header p-3">
+                    <span class="float-right" id="NotifycationDate"></span>
+                    <h4 class="text-primary">Admin</h4>
+                    <small class="text-muted">
+                        From: viendong.edu.com
+                    </small>
+                    <hr />
+                    <h4 class="view-mail-header">
+                        <b id="NotifycationTitle"></b>
+                    </h4>
+                </div>
+                <hr />
+                <div class="view-mail-header p-3">
+                    <p id="NotitycationView"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/jquery.signalR-2.2.1.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script>
+
+        var TokenNotice = localStorage.getItem("TokenNotification");
+        var Url = String.format(`/api/subject/getnoticedetail?id={0}`, TokenNotice);
+        callAjax(Url, null, function (data) {
+
+            $('#NotifycationTitle').html(data.response_data.subject);
+            $('#NotitycationView').html(data.response_data.body);
+            $('#NotifycationDate').html(dateFormat(data.response_data.create_date, "dd/mm/yyyy"));
+        }, 1);
+    </script>
+}

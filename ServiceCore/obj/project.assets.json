@@ -1,0 +1,229 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.1": {
+      "Newtonsoft.Json/11.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "VD.DataLayer/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/VD.DataLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VD.DataLayer.dll": {}
+        }
+      },
+      "VD.Utility/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/VD.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VD.Utility.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.1/win": {
+      "Newtonsoft.Json/11.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "VD.DataLayer/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/VD.DataLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VD.DataLayer.dll": {}
+        }
+      },
+      "VD.Utility/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/VD.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VD.Utility.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.1/win-x64": {
+      "Newtonsoft.Json/11.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "VD.DataLayer/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/VD.DataLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VD.DataLayer.dll": {}
+        }
+      },
+      "VD.Utility/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/VD.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VD.Utility.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.1/win-x86": {
+      "Newtonsoft.Json/11.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "VD.DataLayer/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/VD.DataLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VD.DataLayer.dll": {}
+        }
+      },
+      "VD.Utility/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/VD.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VD.Utility.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Newtonsoft.Json/11.0.1": {
+      "sha512": "pNN4l+J6LlpIvHOeNdXlwxv39NPJ2B5klz+Rd2UQZIx30Squ5oND1Yy3wEAUoKn0GPUj6Yxt9lxlYWQqfZcvKg==",
+      "type": "package",
+      "path": "newtonsoft.json/11.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.11.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
+    "VD.DataLayer/1.0.0": {
+      "type": "project",
+      "path": "../VD.DataLayer/VD.DataLayer.csproj",
+      "msbuildProject": "../VD.DataLayer/VD.DataLayer.csproj"
+    },
+    "VD.Utility/1.0.0": {
+      "type": "project",
+      "path": "../Bcore.Utility/VD.Utility.csproj",
+      "msbuildProject": "../Bcore.Utility/VD.Utility.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.1": [
+      "Newtonsoft.Json >= 11.0.1",
+      "VD.DataLayer >= 1.0.0",
+      "VD.Utility >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Dell\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Dell\\Desktop\\VDEducation_Solution\\Monitor\\ServiceCore\\ServiceCore.csproj",
+      "projectName": "ServiceCore",
+      "projectPath": "C:\\Users\\Dell\\Desktop\\VDEducation_Solution\\Monitor\\ServiceCore\\ServiceCore.csproj",
+      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dell\\Desktop\\VDEducation_Solution\\Monitor\\ServiceCore\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net461"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net461": {
+          "projectReferences": {
+            "C:\\Users\\Dell\\Desktop\\VDEducation_Solution\\Monitor\\Bcore.Utility\\VD.Utility.csproj": {
+              "projectPath": "C:\\Users\\Dell\\Desktop\\VDEducation_Solution\\Monitor\\Bcore.Utility\\VD.Utility.csproj"
+            },
+            "C:\\Users\\Dell\\Desktop\\VDEducation_Solution\\Monitor\\VD.DataLayer\\VD.DataLayer.csproj": {
+              "projectPath": "C:\\Users\\Dell\\Desktop\\VDEducation_Solution\\Monitor\\VD.DataLayer\\VD.DataLayer.csproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "net461": {
+        "dependencies": {
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[11.0.1, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\VD.DataLayer\bin\Release\BlockChain.DataLayer.dll
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\VD.DataLayer\bin\Release\BlockChain.DataLayer.pdb
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\VD.DataLayer\bin\Release\Newtonsoft.Json.dll
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\VD.DataLayer\obj\Release\VD.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\VD.DataLayer\obj\Release\VD.DataLayer.csproj.CopyComplete
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\VD.DataLayer\obj\Release\BlockChain.DataLayer.dll
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\VD.DataLayer\obj\Release\BlockChain.DataLayer.pdb
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\VD.DataLayer\obj\Release\VD.DataLayer.csprojAssemblyReference.cache

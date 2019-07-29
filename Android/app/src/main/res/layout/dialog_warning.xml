@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/relative_Forgot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cảnh báo"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:padding="10dp"
+                android:id="@+id/tvWarning"
+                android:text="Môn học này đang trong quá trình học, yêu cầu đăng sẽ được chờ phê duyệt, nếu thất bại, bạn sẽ không thể đăng kí lại"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack" />
+
+            <!--<EditText-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:id="@+id/edtNameWallet"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:background="@drawable/custom_border"-->
+                <!--android:hint="@string/Type_Wallet_Name"-->
+                <!--android:padding="10dp"-->
+                <!--android:textSize="14sp" />-->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đồng ý"
+                android:textAllCaps="false"
+                android:background="@drawable/custom_button"
+                android:textColor="@drawable/custom_text_button"
+                />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hủy"
+                android:textAllCaps="false"
+                android:background="@drawable/custom_button"
+                android:textColor="@drawable/custom_text_button"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\Bcore.Utility\bin\Debug\Bcore.Utility.dll
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\Bcore.Utility\bin\Debug\Bcore.Utility.pdb
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\Bcore.Utility\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\Bcore.Utility\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\Bcore.Utility\obj\Debug\VD.Utility.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\Bcore.Utility\obj\Debug\VD.Utility.csproj.CopyComplete
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\Bcore.Utility\obj\Debug\Bcore.Utility.dll
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\Bcore.Utility\obj\Debug\Bcore.Utility.pdb
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\Bcore.Utility\obj\Debug\VD.Utility.csprojAssemblyReference.cache

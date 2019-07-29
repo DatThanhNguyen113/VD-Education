@@ -1,0 +1,183 @@
+﻿@using VDSoLienLac.Principal;
+@model VDSoLienLac.Models.UserProfileModel
+@{
+    ViewBag.Title = "UserProfile";
+}
+
+<div class="content-header">
+    <h3 class="mb-0 title">Thông Tin Cá Nhân</h3>
+</div>
+
+<div class="content-body">
+    <div class="row">
+        <div class="col-3">
+            <div class="card VD-border-top p-2">
+                <img src="~/Image/LogoVD.png" class="img-responsive img-avarta" alt="Alternate Text" />
+                <div class="card-body">
+                    <div class="card-title text-center">
+                        <span id="first-name"></span> <span id="last-name"></span>
+                    </div>
+                    <div id="user-role" class="card-role text-center"></div>
+                </div>
+            </div>
+            <div class="card VD-border-top p-2">
+                <div class="card-header VD-border-bottom-dotted">
+                    <h3 class="card-title m-0">Giới Thiệu</h3>
+                </div>
+                <div class="card-body">
+                    <div class="profile-desc">
+                        Xin chào Viễn Đông...
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-de mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>Ngày Sinh</td>
+                                    <td id="UserDisplayBirthday" class="text-right"></td>
+                                </tr>
+                                <tr>
+                                    <td>Giới Tính</td>
+                                    <td id="UserDisplayGender" class="text-right"></td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td id="UserDisplayEmail" class="text-right"></td>
+                                </tr>
+                                <tr>
+                                    <td>Địa Chỉ</td>
+                                    <td id="UserDisplayAddress" class="text-right"></td>
+                                </tr>
+                                <tr>
+                                    <td>Số Điện Thoại</td>
+                                    <td id="UserDisplayPhone" class="text-right"></td>
+                                </tr>
+                                <tr>
+                                    <td>CMND</td>
+                                    <td id="UserDisplayID" class="text-right"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="card VD-border-top">
+                <div class="card-body">
+                    <div class="card-title mb-3 pb-2" style="border-bottom:1px dotted rgba(0, 0, 0, 0.2)">
+                        Thay đổi Thông tin đăng nhập
+                    </div>
+                    @using (Html.BeginForm("", "", FormMethod.Post, new { id = "frmUserPassword", @class = "form-horizontal", enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.ID)
+                        <fieldset class="form-label-group">
+                            @Html.TextBoxFor(model => model.Password, "", new { placeholder = "Mật khẩu cũ", type = "password", @class = "form-control", id = "old-password" })
+                            @Html.Label("old-password", "Mật khẩu cũ", new { })
+                        </fieldset>
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        @Html.Label(" ", new { id = "old-password-error", @class = "error text-danger", @for = "old-password" });
+                        <fieldset class="form-label-group">
+                            @Html.TextBoxFor(model => model.NewPass, "", new { placeholder = "Mật khẩu mới", type = "password", @class = "form-control", id = "new-password" })
+                            @Html.Label("new-password", "Mật khẩu mới", new { })
+                        </fieldset>
+                        @Html.ValidationMessageFor(model => model.NewPass, "", new { @class = "text-danger" })
+                        @Html.Label(" ", new { id = "new-password-error", @class = "error text-danger", @for = "new-password" });
+                        <fieldset class="form-label-group">
+                            @Html.TextBoxFor(model => model.ConfirmPass, "", new { placeholder = "Nhập lại mật khẩu", type = "password", @class = "form-control", id = "confirm-password" })
+                            @Html.Label("confirm-password", "Nhập lại mật khẩu", new { })
+                        </fieldset>
+                        @Html.ValidationMessageFor(model => model.ConfirmPass, "", new { @class = "text-danger" })
+                        @Html.Label(" ", new { id = "confirm-password-error", @class = "error text-danger", @for = "confirm-password" });
+                        <button id="btnLogin" type="button" class="btn-gradient-secondary d-block ml-auto my-3 py-2">Xác Nhận</button>
+                    }
+                    <hr class="VD-vertical-lines" />
+                    <div class="card-title mb-3 pb-2" style="border-bottom:1px dotted rgba(0, 0, 0, 0.2)">
+                        Thay đổi Thông tin cá nhân
+                    </div>
+                    @using (Html.BeginForm("", "", FormMethod.Post, new { id = "frmUserProfile", @class = "form-horizontal", enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.ID)
+                        <fieldset class="form-label-group">
+                            @Html.TextBox("UserFirstName", null, new { placeholder = "Tên", type = "text", @class = "form-control", id = "UserFirstName" })
+                            @Html.Label("UserFirstName", "Tên", new { })
+                        </fieldset>
+                        <span></span>
+                        @Html.Label(" ", new { id = "UserFirstName-error", @class = "error text-danger", @for = "UserFirstName" });
+                        <fieldset class="form-label-group">
+                            @Html.TextBox("UserLastName", null, new { placeholder = "Họ", type = "text", @class = "form-control", id = "UserLastName" })
+                            @Html.Label("UserLastName", "Họ", new { })
+                        </fieldset>
+                        <span></span>
+                        @Html.Label(" ", new { id = "UserLastName-error", @class = "error text-danger", @for = "UserLastName" });
+                        <fieldset class="form-label-group">
+                            @Html.TextBox("UserEmail", null, new { placeholder = "Email", type = "email", @class = "form-control", id = "UserEmail" })
+                            @Html.Label("UserEmail", "Email", new { })
+                        </fieldset>
+                        <span></span>
+                        @Html.Label(" ", new { id = "UserEmail-error", @class = "error text-danger", @for = "UserEmail" });
+                        <fieldset class="form-label-group">
+                            @Html.TextBox("UserBirthday", null, new { placeholder = "Ngày Sinh", type = "date", @class = "form-control", id = "UserBirthday" })
+                            @Html.Label("UserBirthday", "Ngày Sinh", new { })
+                        </fieldset>
+                        <span></span>
+                        @Html.Label(" ", new { id = "UserBirthday-error", @class = "error text-danger", @for = "UserBirthday" });
+                        <fieldset class="form-label-group">
+                            <h6 class="title">Giới Tính:</h6>
+                            <div class="pretty p-icon p-curve p-jelly">
+                                @Html.RadioButton("Gender", "0", true)
+                                <div class="state p-danger">
+                                    <i class="icon fas fa-venus"></i>
+                                    @Html.Label("", "Nữ", new { })
+                                </div>
+                            </div>
+                            <div class="pretty p-icon p-curve p-jelly">
+                                @Html.RadioButton("Gender", "1")
+                                <div class="state p-danger">
+                                    <i class="icon fas fa-mars"></i>
+                                    @Html.Label("", "Nam", new { })
+                                </div>
+                            </div>
+                            <div class="pretty p-icon p-curve p-jelly">
+                                @Html.RadioButton("Gender", "2")
+                                <div class="state p-danger">
+                                    <i class="icon fas fa-transgender-alt"></i>
+                                    @Html.Label("", "Khác", new { })
+                                </div>
+                            </div>
+                        </fieldset>
+                        <span></span>
+                        <fieldset class="form-label-group">
+                            @Html.TextBox("UserAddress", null, new { placeholder = "Địa Chỉ", type = "text", @class = "form-control", id = "UserAddress" })
+                            @Html.Label("UserAddress", "Địa Chỉ", new { })
+                        </fieldset>
+                        <span></span>
+                        @Html.Label(" ", new { id = "UserAddress-error", @class = "error text-danger", @for = "UserAddress" });
+                        <fieldset class="form-label-group">
+                            @Html.TextBox("UserPhone", null, new { placeholder = "Số điện thoại", type = "tel", @class = "form-control", id = "UserPhone" })
+                            @Html.Label("UserPhone", "Số Điện Thoại", new { })
+                        </fieldset>
+                        <span></span>
+                        @Html.Label(" ", new { id = "UserPhone-error", @class = "error text-danger", @for = "UserPhone" });
+                        <fieldset class="form-label-group">
+                            @Html.TextBox("UserNumberCard", null, new { placeholder = "Chứng Minh Thư", type = "text", @class = "form-control", id = "UserNumberCard" })
+                            @Html.Label("UserNumberCard", "Chứng Minh Thư", new { })
+                        </fieldset>
+                        <span></span>
+                        @Html.Label(" ", new { id = "UserNumberCard-error", @class = "error text-danger", @for = "UserNumberCard" });
+                        <button id="btnUpdateUser" type="button" class="btn-gradient-secondary d-block ml-auto my-3 py-2">Xác Nhận</button>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts {
+    <script src="~/Scripts/Manager/Profile.js"></script>
+    <script>
+
+    </script>
+}

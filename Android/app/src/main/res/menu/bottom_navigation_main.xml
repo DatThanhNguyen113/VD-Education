@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_book"
+        android:title="@string/TrangChu" />
+    <item
+        android:id="@+id/action_lesson"
+        android:icon="@drawable/ic_clipboard_2"
+        android:title="@string/LichHoc"
+        />
+    <item
+        android:id="@+id/action_notification"
+        android:icon="@drawable/ic_bell"
+        android:title="@string/ThongBao"
+        />
+    <item
+        android:id="@+id/action_account"
+        android:icon="@drawable/ic_mess"
+        android:title="Tin nhắn" />
+</menu>

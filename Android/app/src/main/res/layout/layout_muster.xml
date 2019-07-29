@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRed"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imgBackMuster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_back"
+            android:padding="20dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Điểm danh"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:typeface="serif" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvHeaderLesson"
+        android:textSize="14sp"
+        android:textColor="@color/colorRed2"
+        android:typeface="serif"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lớp : Thiết kế hướng đối tượng"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/lvMuster"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linear_checkin">
+
+        </ListView>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:id="@+id/linear_checkin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnCheckIn"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@drawable/custom_btn_register"
+                android:text="Scan"
+                android:textAllCaps="false"
+                android:textColor="@drawable/custom_txt_register"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

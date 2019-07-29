@@ -1,0 +1,12 @@
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\ServiceCore\bin\Debug\ServiceCore.dll
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\ServiceCore\bin\Debug\ServiceCore.pdb
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\ServiceCore\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\ServiceCore\bin\Debug\Bcore.Utility.dll
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\ServiceCore\bin\Debug\BlockChain.DataLayer.dll
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\ServiceCore\bin\Debug\Bcore.Utility.pdb
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\ServiceCore\bin\Debug\BlockChain.DataLayer.pdb
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\ServiceCore\obj\Debug\ServiceCore.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\ServiceCore\obj\Debug\ServiceCore.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\ServiceCore\obj\Debug\ServiceCore.csproj.CopyComplete
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\ServiceCore\obj\Debug\ServiceCore.dll
+C:\Users\Dell\Desktop\VDEducation_Solution\Monitor\ServiceCore\obj\Debug\ServiceCore.pdb

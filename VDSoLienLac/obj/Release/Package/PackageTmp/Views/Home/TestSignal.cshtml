@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "TestSignal";
+}
+
+<h2>TestSignal</h2>
+@section scripts{
+    <script src="~/Scripts/jquery.signalR-2.1.1.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script>
+        $(function () {
+            var notehub = $.connection.notify;
+            notehub.client.broadcastNotice = function (data) {
+                console.log(data);
+            }
+            notehub.client.broadcastSpecify = function (data) {
+                console.log('notice specify', data);
+            }
+
+            $.connection.hub.qs = { 'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjE2MDYwMjAwMTIiLCJwcmltYXJ5c2lkIjoiMTYwNjAyMDAxMiIsIm5iZiI6MTU2MTI3NjQ5OSwiZXhwIjoxNTYzMDA0NDk5LCJpYXQiOjE1NjEyNzY0OTl9.csheX5Wske2AfVkqoQN6SkDcadYSf9AHiL8GhTdF-Xs' };
+            $.connection.hub.start().done(function () {
+                notehub.server.addConnection('10TH1C', $.connection.hub.id);
+            });
+        });
+    </script>
+}
+

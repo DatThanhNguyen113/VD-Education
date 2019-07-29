@@ -1,0 +1,1 @@
+<InputValue IpAdress="::1" ComputerName="DESKTOP-OK28B51" UserID="GV-eBjOxn0900" Context="TEA" Sys_ViewID="2003" LanguageID="29" /><RequestParams UserID="GV-eBjOxn0900"  Context="TEA"  Sys_ViewID="2003" TimeTableID = "0" Session = "s&#225;ng" CurrentDate = "2019-07-13" /> 

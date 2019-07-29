@@ -1,0 +1,153 @@
+﻿@using VDSoLienLac.Principal;
+@using System.Security.Claims;
+@{
+    var currentPrincipal = User.Identity as VDClaimIdentity;
+    var currentToken = ""; var currentRole = ""; var currentClass = "";
+    if (currentPrincipal != null)
+    {
+        currentToken = currentPrincipal.FindFirst("Token")?.Value.ToString();
+        currentRole = currentPrincipal.FindFirst(ClaimTypes.Role)?.Value.ToString();
+        currentClass = currentPrincipal.FindFirst("ClassCode")?.Value.ToString();
+    }
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Sổ liên lạc điện tử</title>
+    <link href="~/Content/reset.css" rel="stylesheet" />
+    @*@Styles.Render("~/Content/css")*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/vendor/pretty-checkbox.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="~/Content/Css/Loader.css" rel="stylesheet" />
+    <link href="~/Content/Css/Index.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="loader-wrapper">
+        <svg viewBox=" 0 0 512 512" id="loader">
+            <linearGradient id="loaderLinearColors" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="5%" stop-color="#28bcfd"></stop>
+                <stop offset="100%" stop-color="#1d78ff"></stop>
+            </linearGradient>
+            <g>
+                <circle cx="256" cy="256" r="150" fill="none" stroke="url(#loaderLinearColors)"></circle>
+            </g>
+            <g>
+                <circle cx="256" cy="256" r="125" fill="none" stroke="url(#loaderLinearColors)"></circle>
+            </g>
+            <g>
+                <circle cx="256" cy="256" r="100" fill="none" stroke="url(#loaderLinearColors)"></circle>
+            </g>
+            <g>
+                <circle cx="256" cy="256" r="75" fill="none" stroke="url(#loaderLinearColors)"></circle>
+            </g>
+            <circle cx="256" cy="256" r="60" fill="url(#loaderImage)" stroke="none" stroke-width="0"></circle>
+
+            <!-- Change the preloader logo here -->
+            <defs>
+                <pattern id="loaderImage" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+                    <image href="~/Image/LogoVD.png" preserveAspectRatio="none" width="1" height="1"></image>
+                </pattern>
+            </defs>
+        </svg>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <div class="wrapper-manager">
+        @Html.Partial("ManagerPartial")
+        <main class="w-100 h-100">
+            @Html.Partial("NavigationPartial")
+            <div id="content">
+                @RenderBody()
+            </div>
+        </main>
+    </div>
+
+    <div class="modal modal-warning fade" id="modalWarning" tabindex="-1" role="dialog" aria-labelledby="modalWarningLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content transfer-container" style="background-color:#efb706; color:#fff">
+                <div class="modal-body d-flex align-items-center">
+                    <div class="col-2">
+                        <img src="~/Image/SVG/warning.svg" alt="Alternate Text" />
+                    </div>
+                    <div class="col-10"><span id="warning"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-warning fade" id="modalError" tabindex="-1" role="dialog" aria-labelledby="modalErrorLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content transfer-container" style="background-color:#cc3300; color:#fff">
+                <div class="modal-body d-flex align-items-center">
+                    <div class="col-2">
+                        <img src="~/Image/SVG/error.svg" alt="Alternate Text" />
+                    </div>
+                    <div class="col-10"><span id="error"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-warning fade" id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="modalErrorLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content transfer-container" style="background-color:#13bf99;color: #fff;">
+                <div class="modal-body d-flex align-items-center">
+                    <div class="col-2">
+                        <img src="~/Image/SVG/success.svg" alt="Alternate Text" />
+                    </div>
+                    <div class="col-10"><span id="success"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-warning fade" id="modalConfirm" tabindex="-1" role="dialog" aria-labelledby="modalConfirm" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title w-100 text-center text-blue">Confirm Action</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col py-1">
+                                <form class="modal-warning custom-form p-4 form-register needs-validation">
+                                    <div class="form-group text-center">
+                                        <p class="text-grey" id="messageConfirm">
+                                        </p>
+                                    </div>
+                                    <div class="form-group text-center" id="btnConfirm">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var currentJwt = '@Html.Raw(currentToken)'
+        var currentRole = '@Html.Raw(currentRole)'
+        var currentClass = '@Html.Raw(currentClass)'
+    </script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/Vendor/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.2.1.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Scripts/Core/core-app.js"></script>
+    <script src="~/Scripts/Account/Manager.js"></script>
+    @RenderSection("scripts", required: false)
+    <script>
+        UIForMobile();
+    </script>
+</body>
+</html>

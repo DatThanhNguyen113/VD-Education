@@ -1,0 +1,225 @@
+﻿@model ServiceCore.Models.SignInModel
+@{
+    Layout = null;
+    var mMessage = "";
+    if (ViewBag.SignInStatus != null)
+    {
+        mMessage = ViewBag.SignInStatus;
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Viễn Đông, powerful, clean, modern responsive bootstrap 4 admin template with unlimited possibilities with system manager.">
+    <meta name="keywords" content="admin template, manager">
+    <meta name="author" content="MinhTuan">
+    <title>Sổ liên lạc điện tử</title>
+    <link href="~/Content/reset.css" rel="stylesheet" />
+    @*@Styles.Render("~/Content/css")*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="~/Content/Css/Index.css" rel="stylesheet" />
+</head>
+<body>
+    <Main id="account-login">
+        <div class="VDT-introduct">
+            <header>
+                <nav id="navigation" class="navbar navbar-expand-lg navbar-light">
+                    <div class="container">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavbarLoginPage" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"></a>
+                        <div class="collapse navbar-collapse" id="NavbarLoginPage">
+                            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#"><i class="fas fa-book-open"></i> Hướng dẫn<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Liên lạc</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-xl-8">
+                        <div class="introduct-content">
+                            <h1 class="text-right">Sổ Liên Lạc Điện Tử</h1>
+                            <p class="text-right mt-3">Nơi kết nối gia đình và nhà trường</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="VDT-feature">
+            <div class="container-fluid">
+                <h1>Tính Năng</h1>
+                <hr />
+                <!--Feature 1-->
+                <div class="row mt-5">
+                    <div class="col-xl-3">
+                        <div class="feature-content">
+                            <div class="feature-circle rounded-circle">
+                                <span class="cc">1</span>
+                            </div>
+                            <h1>Điểm Danh</h1>
+                            <p>Điểm danh điện tử giúp phụ huynh và nhà trường giám sát quá trình học một cách dễ dàng hơn.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-5">
+                        <div class="feature-image f-image-1"></div>
+                    </div>
+                    <div class="col-xl-4"></div>
+                </div>
+                <!--Feature 2-->
+                <div class="row mt-5">
+                    <div class="col-xl-3">
+                        <div class="feature-content">
+                            <div class="feature-circle rounded-circle">
+                                <span class="cc">2</span>
+                            </div>
+                            <h1>Đăng Kí Môn Học</h1>
+                            <p>Nhanh hơn, tiết kiệm thời gian và chủ động quản lý lịch học.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-5">
+                        <div class="feature-image f-image-2">
+
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+
+                    </div>
+                </div>
+                <!--Feature 3-->
+                <div class="row mt-5">
+                    <div class="col-xl-3">
+                        <div class="feature-content">
+                            <div class="feature-circle rounded-circle">
+                                <span class="cc">3</span>
+                            </div>
+                            <h1>Xem Thời Khóa Biểu</h1>
+                            <p>Giúp sinh viên nhanh chóng nắm bắt những thay đổi trong lịch học.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-5">
+                        <div class="feature-image f-image-3">
+
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+
+                    </div>
+                </div>
+                <!--Feature 4-->
+                <div class="row mt-5">
+                    <div class="col-xl-3">
+                        <div class="feature-content">
+                            <div class="feature-circle rounded-circle">
+                                <span class="cc">4</span>
+                            </div>
+                            <h1>Nhận Thông Báo</h1>
+                            <p>Chủ động nhận những thông báo mới nhất từ nhà trường</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-5">
+                        <div class="feature-image f-image-4"></div>
+                    </div>
+                    <div class="col-xl-4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="VDT-application">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <h1>Hỗ trợ đa nền tảng</h1>
+                        <div class="card mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-4" style="background-color:#1f263b">
+                                    <img src="/Image/Isometric/application_1.gif" class="card-img" alt="...">
+                                </div>
+                                <div class="col-md-8" style="background-color:#1f263b">
+                                    <div class="card-body pt-4 pl-4 h-50" style="background-color:#222940">
+                                        <h5 class="card-title"><span>Tải ứng dụng di động</span></h5>
+                                        <p class="card-text">Chọn ứng dụng ương ứng để tải và cài đặt.</p>
+                                    </div>
+                                    <div class="card-footer text-center h-50 pt-4">
+                                        <a class="btn-app btn-filled apple mr-4" href="https://github.com/minhtuanit1992/download-mobile"></a>
+                                        <a class="btn-app btn-filled android ml-4" href="https://github.com/minhtuanit1992/download-mobile"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6"></div>
+                </div>
+            </div>
+        </div>
+        <div class="card border-grey border-lighten-3 m-0 box-shadow-0 card-account-right height-400 mt-5 form-content pull-up">
+            <div class="card-content">
+                <div class="card-body p-5">
+                    <p class="text-left mb-4 h5 text-capitalize">Đăng Nhập</p>
+                    <p class="text-left mb-2">Để truy vấn thông tin sinh viên nhanh nhất</p>
+                    <span id="main-message" class="mb-2 text-danger d-none"></span>
+                    @using (Html.BeginForm("SignIn", "Account", FormMethod.Post, new { @id = "frmSignIn", @class = "form-horizontal", enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.ID)
+                        <fieldset class="form-label-group">
+                            @Html.TextBoxFor(model => model.UserName, "", new { placeholder = "Tên Đăng Nhập", type = "text", @class = "form-control", id = "user-name" })
+                            <span class="login-input-boder"></span>
+                            @Html.Label("user-name", "Tên Đăng Nhập", new { })
+                        </fieldset>
+                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                        <fieldset class="form-label-group">
+                            @Html.TextBoxFor(model => model.Password, "", htmlAttributes: new { placeholder = "Mật Khẩu", type = "password", @class = "form-control", id = "user-password" })
+                            <span class="login-input-boder"></span>
+                            @Html.Label("user-password", "Mật Khẩu", null)
+                        </fieldset>
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        <div class="form-group row">
+                            <div class="col-md-6 col-12 text-center text-sm-left">
+                                <fieldset>
+                                    <input type="checkbox" id="remember-me" style="display:none">
+                                    <label for="remember-me" class="check">
+                                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                            <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                            <polyline points="1 9 7 14 15 4"></polyline>
+                                        </svg>
+                                        <span>Nhớ Mật Khẩu</span>
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6 col-12 float-sm-left text-center text-sm-right"><a href="#" class="card-link">Bạn Quên Mật Khẩu?</a></div>
+                        </div>
+                        <button id="btnLogin" type="submit" class="btn-gradient-secondary btn-block my-5">Đăng Nhập</button>
+                    }
+                </div>
+            </div>
+        </div>
+    </Main>
+    <script>
+        var MessageSignIn = '@mMessage';
+    </script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/Vendor/jquery.validate.min.js"></script>
+    <script src="~/Scripts/Core/core-app.js"></script>
+    <script src="~/Scripts/Account/login.js"></script>
+    <script>
+        console.log($(window).width());
+        console.log($(window).height());
+        UIForMobile();
+    </script>
+</body>
+</html>
